@@ -22,16 +22,25 @@
       box-shadow: 0 0 36px 0 rgba(25,31,58,.09);
       position: relative;
     }
-.header-image {
+.header-wrapper {
   width: 100%;
   height: 240px;
-  object-fit: cover;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #1fd1f9);
   border-radius: 22px;
   margin-bottom: 1.7em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 8px 32px 0 rgba(76,124,246,0.08);
-  display: block;
 }
 
+.header-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 
     h1, h2 {
@@ -187,6 +196,13 @@
       height: 140px;
     }
   }
+    @media (max-width: 600px) {
+  .header-wrapper {
+    height: 160px;
+    border-radius: 14px;
+  }
+}
+
   </style>
   <!-- برای آیکون‌ها -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
